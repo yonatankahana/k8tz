@@ -41,7 +41,7 @@ func copyDirectory(src, dst string, overwrite bool) error {
 			}
 
 			if !exists || overwrite {
-				if err := copy(sourcePath, destPath); err != nil {
+				if err := copyFile(sourcePath, destPath); err != nil {
 					return fmt.Errorf("failed to copy file from '%s' to '%s', error: %w", sourcePath, destPath, err)
 				}
 			} else {
@@ -60,7 +60,7 @@ func copyDirectory(src, dst string, overwrite bool) error {
 	return nil
 }
 
-func copy(src, dst string) error {
+func copyFile(src, dst string) error {
 	fmt.Fprintf(os.Stderr, "Copying '%s' to '%s'\n", src, dst)
 	out, err := os.Create(dst)
 	if err != nil {
