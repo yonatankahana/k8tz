@@ -208,7 +208,7 @@ func (h *RequestsHandler) lookupGenerator(namespace string, pod *corev1.Pod) (*i
 			return nil, nil
 		}
 	} else if !h.InjectByDefault {
-		infoLogger.Printf("skipping pod (%s/%s) because no other insturction and injection disabled by default", namespace, pod.Name)
+		infoLogger.Printf("skipping pod (%s/%s) because no other instruction and injection disabled by default", namespace, pod.Name)
 		return nil, nil
 	}
 

@@ -71,7 +71,7 @@ func Test_isObjectInjected(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "annotation value is emtpy",
+			name: "annotation value is empty",
 			args: args{
 				obj: &metav1.ObjectMeta{
 					Annotations: map[string]string{
@@ -627,7 +627,7 @@ func TestPatchGenerator_createPostInjectionAnnotations(t *testing.T) {
 func comparePatches(got *k8tz.Patches, goldenFile string) error {
 	hyp, err := json.MarshalIndent(got, "", "  ")
 	if err != nil {
-		return fmt.Errorf("failed to convert refrence to json, refrence: %v, err: %v", got, err)
+		return fmt.Errorf("failed to convert reference to json, reference: %v, err: %v", got, err)
 	}
 
 	golden, exists, err := readGolden(goldenFile)
