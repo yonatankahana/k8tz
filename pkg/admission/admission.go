@@ -176,13 +176,6 @@ func (h *RequestsHandler) readAdmissionReview(r *http.Request) (*admission.Admis
 		return nil, http.StatusBadRequest, errors.New("review parsed but request is null")
 	}
 
-	// infoLogger.Printf("-----------\n")
-
-	// s, _ := json.MarshalIndent(review, "", "  ")
-	// infoLogger.Println(string(body))
-
-	// infoLogger.Printf("-----------\n")
-
 	return review, http.StatusOK, nil
 }
 
