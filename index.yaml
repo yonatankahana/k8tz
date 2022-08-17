@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   k8tz:
   - apiVersion: v1
+    appVersion: 0.6.0
+    created: "2022-08-17T15:10:49.682641878Z"
+    description: Kubernetes admission controller to inject timezones into Pods and
+      CronJobs
+    digest: d1a5b053de26fba483ea0dc82b8be7ccd6ad2f31a8e01541e2b1b34d1225b6cb
+    home: http://k8tz.io
+    icon: https://github.com/k8tz/k8tz/raw/master/assets/k8tz-icon-transparent.png
+    keywords:
+    - timezone
+    - timezones
+    - admission
+    - controller
+    name: k8tz
+    sources:
+    - https://github.com/k8tz/k8tz
+    urls:
+    - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.6.0-k8tz-v0.6.0/k8tz-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v1
     appVersion: 0.5.2
     created: "2022-07-31T19:56:10.631671373Z"
     description: Kubernetes admission controller to inject timezones into Pods and
@@ -21,4 +40,4 @@ entries:
     urls:
     - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.5.1-k8tz-v0.5.1/k8tz-0.5.1.tgz
     version: 0.5.1
-generated: "2022-07-31T19:56:10.631679774Z"
+generated: "2022-08-17T15:10:49.682654383Z"
