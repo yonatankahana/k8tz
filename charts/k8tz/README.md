@@ -55,7 +55,7 @@ helm upgrade --install k8tz k8tz/k8tz \
 | timezone                           | The default timezone to inject                                                                                                                                                | UTC               |
 | injectionStrategy                  | The default injection strategy to use                                                                                                                                         | initContainer     |
 | injectAll                          | If true, timezone will be injected to the pod even when there is no annotation with explicit injection request. When false, the `k8tz.io/inject: true` annotation is required | true              |
-| cronJobTimeZone                    | Enable injection of `timeZone` field to `CronJob`s[^1]                                                                                                                        | false             |
+| cronJobTimeZone                    | Enable injection of `timeZone` field to `CronJob`s[^1]                                                                                                                        | true              |
 | verbose                            | Enable more detailed logs for debug purposes                                                                                                                                  | false             |
 | labels                             | Labels to apply to all resources                                                                                                                                              | {}                |
 | image.repository                   | The image repository for the admission controller and bootstrap image                                                                                                         | quay.io/k8tz/k8tz |
@@ -112,5 +112,5 @@ To uninstall k8tz with Helm use:
 helm delete k8tz
 ```
 
-[^1]: Timezones for CronJobs are available only from kubernetes >=1.24.0-beta.0 with [`CronJobTimeZone`](https://github.com/kubernetes/enhancements/blob/aad71056d33eccf3845b73670106f06a9e74fec6/keps/sig-apps/3140-TimeZone-support-in-CronJob/README.md) feature gate enabled.
+[^1]: Timezones for CronJobs are available from kubernetes >=1.25.
 [^2]: Please refer to cert-manager documentation for using this feature.

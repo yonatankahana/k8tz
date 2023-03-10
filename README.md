@@ -153,4 +153,4 @@ The behaviour of the controller can be changed using annotations on both `Pod` a
 - [X] Write verbose logs for webhook
 - [X] Separate README for Helm chart
 
-[^1]: Timezones for CronJobs are available only from kubernetes >=1.24.0-beta.0 with [`CronJobTimeZone`](https://github.com/kubernetes/enhancements/blob/aad71056d33eccf3845b73670106f06a9e74fec6/keps/sig-apps/3140-TimeZone-support-in-CronJob/README.md) feature gate enabled.
+[^1]: Timezones for CronJobs are available from kubernetes >=1.25.

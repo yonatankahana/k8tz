@@ -50,12 +50,8 @@ spec:
           {{- if .Values.verbose }}
           - "--verbose"
           {{- end }}
-          {{- if .Values.cronJobTimeZone }}
-          {{- if and (ge .Capabilities.KubeVersion.Major "1") (ge .Capabilities.KubeVersion.Minor "24") }}
+          {{- if and (.Values.cronJobTimeZone) (ge .Capabilities.KubeVersion.Major "1") (ge .Capabilities.KubeVersion.Minor "25") }}
           - "--cronJobTimeZone"
-          {{- else }}
-          {{- fail "CronJob injection requires kubernetes >=1.24.0-beta.0 with 'CronJobTimeZone' feature gate enabled" }}
-          {{- end }}
           {{- end }}
           securityContext:
             {{- include "k8tz.securityContext" . | nindent 12 }}
