@@ -3,6 +3,36 @@ entries:
   k8tz:
   - annotations:
       artifacthub.io/changes: |
+        - kind: "fixed"
+          description: "Prevent null pointer de-referencing on cronjobs"
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: "source"
+          url: "https://github.com/k8tz/k8tz"
+    apiVersion: v2
+    appVersion: 0.13.1
+    created: "2023-09-10T14:31:30.951547422Z"
+    description: Kubernetes admission controller to inject timezones into Pods and
+      CronJobs
+    digest: 8034eeba98b0689c4b533ae288db772367d048e3499463477e113aea9d450190
+    home: http://k8tz.io
+    icon: https://github.com/k8tz/k8tz/raw/master/assets/k8tz-icon-transparent.png
+    keywords:
+    - timezone
+    - timezones
+    - admission
+    - controller
+    - tzdata
+    - tzdb
+    name: k8tz
+    sources:
+    - https://github.com/k8tz/k8tz
+    urls:
+    - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.13.1-k8tz-v0.13.1/k8tz-0.13.1.tgz
+    version: 0.13.1
+  - annotations:
+      artifacthub.io/changes: |
         - kind: "changed"
           description: "Update tzdata package to 2023c"
           links:
@@ -170,4 +200,4 @@ entries:
     urls:
     - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.5.1-k8tz-v0.5.1/k8tz-0.5.1.tgz
     version: 0.5.1
-generated: "2023-06-10T12:52:35.802829812Z"
+generated: "2023-09-10T14:31:30.951574823Z"
