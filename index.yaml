@@ -3,6 +3,42 @@ entries:
   k8tz:
   - annotations:
       artifacthub.io/changes: |
+        - kind: "added"
+          description: "Add tlsMinVersion and tlsCipherSuites to webhook configurations"
+        - kind: "fixed"
+          description: "Don't explicitly set runAsNonRoot to avoid conflict with pod security context"
+        - kind: "fixed"
+          description: "Skip kube-system namespace early in webhook"
+        - kind: "added"
+          description: "add configurable ignoredNamespaces option"
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: "source"
+          url: "https://github.com/k8tz/k8tz"
+    apiVersion: v2
+    appVersion: 0.14.0
+    created: "2023-12-12T14:00:19.223219246Z"
+    description: Kubernetes admission controller to inject timezones into Pods and
+      CronJobs
+    digest: d1740268e1aec6f3d6179a1d54303fb8c9165513a6ff98c6e1f79f8cf4fae98b
+    home: http://k8tz.io
+    icon: https://github.com/k8tz/k8tz/raw/master/assets/k8tz-icon-transparent.png
+    keywords:
+    - timezone
+    - timezones
+    - admission
+    - controller
+    - tzdata
+    - tzdb
+    name: k8tz
+    sources:
+    - https://github.com/k8tz/k8tz
+    urls:
+    - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.14.0-k8tz-v0.14.0/k8tz-0.14.0.tgz
+    version: 0.14.0
+  - annotations:
+      artifacthub.io/changes: |
         - kind: "fixed"
           description: "Prevent null pointer de-referencing on cronjobs"
       artifacthub.io/containsSecurityUpdates: "false"
@@ -200,4 +236,4 @@ entries:
     urls:
     - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.5.1-k8tz-v0.5.1/k8tz-0.5.1.tgz
     version: 0.5.1
-generated: "2023-09-10T14:31:30.951574823Z"
+generated: "2023-12-12T14:00:19.223267756Z"
