@@ -3,6 +3,36 @@ entries:
   k8tz:
   - annotations:
       artifacthub.io/changes: |
+        - kind: "fixed"
+          description: "Fix volumeMounts volume name not found error when using custom initContainer name"
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: "source"
+          url: "https://github.com/k8tz/k8tz"
+    apiVersion: v2
+    appVersion: 0.16.2
+    created: "2024-09-21T14:55:46.092943369Z"
+    description: Kubernetes admission controller to inject timezones into Pods and
+      CronJobs
+    digest: 8e298b9f5def6fb4be9eb627ac6fce64bf0cd8614a78c50d95ea6d76f6646dc7
+    home: http://k8tz.io
+    icon: https://github.com/k8tz/k8tz/raw/master/assets/k8tz-icon-transparent.png
+    keywords:
+    - timezone
+    - timezones
+    - admission
+    - controller
+    - tzdata
+    - tzdb
+    name: k8tz
+    sources:
+    - https://github.com/k8tz/k8tz
+    urls:
+    - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.16.2-k8tz-v0.16.2/k8tz-0.16.2.tgz
+    version: 0.16.2
+  - annotations:
+      artifacthub.io/changes: |
         - kind: "added"
           description: "Add possibility to set init container resources"
       artifacthub.io/containsSecurityUpdates: "true"
@@ -339,4 +369,4 @@ entries:
     urls:
     - https://github.com/yonatankahana/k8tz/releases/download/helm-chart-v0.5.1-k8tz-v0.5.1/k8tz-0.5.1.tgz
     version: 0.5.1
-generated: "2024-06-01T18:50:10.141234885Z"
+generated: "2024-09-21T14:55:46.0930351Z"
